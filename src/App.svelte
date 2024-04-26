@@ -5,7 +5,7 @@ import { Router, Route } from "svelte-routing";
   // Admin Layout
 import Admin from "./layouts/Admin.svelte";
 
-import Index from "./views/index.svelte";
+import Index from "./Index.svelte";
 
 
   export let url = "";
