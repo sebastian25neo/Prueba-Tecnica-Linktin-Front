@@ -42,17 +42,17 @@
     </span>
     <a
       use:link
-      href="/admin/dashboard"
+      href="/admin/CreateProducts"
       class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
     >
-      Dashboard
+    CreateProducts
     </a>
     <a
       use:link
-      href="/admin/settings"
+      href="/admin/Buyproduct"
       class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
     >
-      Settings holas 
+    Buyproduct holas 
     </a>
     <a
       use:link

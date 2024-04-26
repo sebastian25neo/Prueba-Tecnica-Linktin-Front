@@ -8,7 +8,7 @@ import { navigate } from "svelte-routing";
 
   function iniciarSesion() {
     console.log('buenos dias sii funciono');
-    navigate("/admin/dashboard");
+    navigate("/admin/CreateProducts");
   }
 
 </script>

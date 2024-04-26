@@ -11,7 +11,8 @@
   import Index from "./views/Index.svelte";
   import Landing from "./views/Landing.svelte";
   import Profile from "./views/Profile.svelte";
-  import Login from "./views/auth/Login.svelte";
+ // import Login from "./views/auth/Login.svelte";
+ import Login from "./views/Login.svelte";
 
   export let url = "";
 </script>

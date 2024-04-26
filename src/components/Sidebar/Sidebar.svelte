@@ -99,11 +99,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin/dashboard"
-            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/dashboard') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-blueGray-500'}"
+            href="/admin/CreateProducts"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/CreateProducts') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-blueGray-500'}"
           >
             <i
-              class="fas fa-plus-circle mr-2 text-sm {location.href.indexOf('/admin/dashboard') !== -1 ? 'opacity-75' : 'text-blueGray-300'}"
+              class="fas fa-plus-circle mr-2 text-sm {location.href.indexOf('/admin/CreateProducts') !== -1 ? 'opacity-75' : 'text-blueGray-300'}"
             ></i>
             Crear Productos
           </a>
@@ -112,11 +112,11 @@
         <li class="items-center">
           <a
             use:link
-            href="/admin/settings"
-            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/settings') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-blueGray-500'}"
+            href="/admin/Buyproduct"
+            class="text-xs uppercase py-3 font-bold block {location.href.indexOf('/admin/Buyproduct') !== -1 ? 'text-red-500 hover:text-red-600':'text-blueGray-700 hover:text-blueGray-500'}"
           >
             <i
-              class="fas fa-shopping-cart mr-2 text-sm {location.href.indexOf('/admin/settings') !== -1 ? 'opacity-75' : 'text-blueGray-300'}"
+              class="fas fa-shopping-cart mr-2 text-sm {location.href.indexOf('/admin/Buyproduct') !== -1 ? 'opacity-75' : 'text-blueGray-300'}"
             ></i>
             Comprar productos
           </a>
@@ -134,24 +134,6 @@
             Listado de productos comprados
           </a>
         </li>
-      </ul>
-
-      <!-- Divider -->
-      <hr class="my-4 md:min-w-full" />
-      <!-- Heading -->
-
-      <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
-        <li class="items-center">
-          <a
-            use:link
-            class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
-            href="/auth/login"
-          >
-            <i class="fas fa-fingerprint text-blueGray-300 mr-2 text-sm"></i>
-            Login
-          </a>
-        </li>
-
       </ul>
 
       <!-- Navigation -->

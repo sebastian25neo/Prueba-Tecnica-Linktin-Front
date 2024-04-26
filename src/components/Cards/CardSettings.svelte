@@ -1,9 +1,9 @@
 <script>
   // core components
   export let location;
-  import axios from 'axios';
+  import axios from '../scripts/axiosConfig';
   import Swal from 'sweetalert2';
-  import eventBus from 'components/Scripts/eventBus.js';
+  import eventBus from '../scripts/eventBus.js';
   
 
   let nameProduct = '';
@@ -35,7 +35,7 @@
   };
 
     try {
-      const response = await axios.post('http://localhost:3000/productos', postData);
+      const response = await axios.post('/productos', postData);
       responseMessage = response.data.message;
     Swal.fire({
         icon: 'success',

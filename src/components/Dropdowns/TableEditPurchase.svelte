@@ -3,7 +3,7 @@
   import { createPopper } from "@popperjs/core";
   import { createEventDispatcher } from 'svelte';
   import Swal from 'sweetalert2';
-  import axios from 'axios';
+  import axios from '../scripts/axiosConfig';
   export let item;
 
   const dispatch = createEventDispatcher();
@@ -29,7 +29,7 @@
             });
              // Salir de la función si hay campos vacíos
            } else{
-            axios.put('http://localhost:3000/pedidosUpdate', {
+            axios.put('/pedidosUpdate', {
             id:item.id,
             cantidad: item.cantidad,
           })

@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import Swal from 'sweetalert2';
   import TableAddShoppingCart from "components/Dropdowns/TableAddShoppingCart.svelte"; 
-  import axios from 'axios';
+  import axios from '../scripts/axiosConfig';
 
   let color = "light";
   let responseData = [];
@@ -15,7 +15,7 @@
 
   async function fetchData() {
     try {
-      const response = await axios.get('http://localhost:3000/productos');
+      const response = await axios.get('/productos');
       responseData = response.data;
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -75,7 +75,7 @@ async function buyProduct(item) {
   };
 
     try {
-      const response = await axios.post('http://localhost:3000/pedidos', postData);
+      const response = await axios.post('/pedidos', postData);
       responseMessage = response.data.message;
       console.log(responseMessage);
     Swal.fire({

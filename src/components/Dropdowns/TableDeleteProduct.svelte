@@ -3,7 +3,7 @@
   import { createPopper } from "@popperjs/core";
   import { createEventDispatcher } from 'svelte';
   import Swal from 'sweetalert2';
-  import axios from 'axios';
+  import axios from '../scripts/axiosConfig';
   export let product;
 
   const dispatch = createEventDispatcher();
@@ -23,7 +23,7 @@
     }).then((result) => {
       if (result.isConfirmed) {
         // Enviar la solicitud de eliminación al backend
-        axios.delete(`http://localhost:3000/productosDelete/${product.id}`)
+        axios.delete(`/productosDelete/${product.id}`)
           .then(response => {
 
             dispatch('customEvent');

@@ -1,14 +1,13 @@
 <script>
   import { onMount } from 'svelte';
-  import axios from 'axios';
+  import axios from './axiosConfig';
 
   let products = [];
 
   async function fetchData() {
     try {
-      const response = await axios.get('http://localhost:3000/productos');
+      const response = await axios.get('/productos');
       products = response.data;
-      console.log(products);
     } catch (error) {
       console.error('Error fetching data:', error);
     }

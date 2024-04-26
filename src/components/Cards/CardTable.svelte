@@ -3,8 +3,8 @@
   import { onMount } from 'svelte';
   import TableEditProduct from "components/Dropdowns/TableEditProduct.svelte"; 
   import TableDeleteProduct from "components/Dropdowns/TableDeleteProduct.svelte";
-  import axios from 'axios';
-  import eventBus from 'components/Scripts/eventBus.js';
+  import axios from '../scripts/axiosConfig';
+  import eventBus from '../scripts/eventBus.js';
   export let color = "light";
 
  
@@ -21,7 +21,7 @@
 
    async function fetchData() {
     try {
-      const response = await axios.get('http://localhost:3000/productos');
+      const response = await axios.get('/productos');
       responseData = response.data;
     } catch (error) {
       console.error('Error fetching data:', error);

@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import TableEditPurchase from "components/Dropdowns/TableEditPurchase.svelte";
   import TableDeletePurchase from "components/Dropdowns/TableDeletePurchase.svelte"; 
-  import axios from 'axios';
+  import axios from '../scripts/axiosConfig';
 
   let color = "light";
   let listPurchasedProducts = [];
@@ -11,7 +11,7 @@
 
   async function fetchData() {
     try {
-      const response = await axios.get('http://localhost:3000/pedidos');
+      const response = await axios.get('/pedidos');
       listPurchasedProducts = response.data;
       console.log(listPurchasedProducts);
     } catch (error) {
