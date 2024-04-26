@@ -17,6 +17,15 @@ yarn install
 Una vez que hayas creado un proyecto e instalado las dependencias con npm install (o pnpm install o yarn), inicia un servidor de desarrollo:
 
 ```bash
+#Cada vez que añadas una nueva clase, una clase que no exista en src/assets/styles/tailwind.css, necesitarás ejecutar este comando.
+
+npm run build:tailwind
+
+#Ejecuta en la terminal.
+
+npm run build:fontawesome
+
+#Ejecuta en la terminal.
 npm run dev
 
 ```
