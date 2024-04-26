@@ -1,6 +1,7 @@
-# Creando un proyecto
+# Creando un proyecto De Front end
 
-Intalar paquetes Proyecto!
+Intalar paquetes Proyecto Se ejecuta en el http://localhost:5000!
+
 
 ```bash
 
