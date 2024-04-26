@@ -4,7 +4,7 @@
   import { createEventDispatcher } from 'svelte';
   import Swal from 'sweetalert2';
   import axios from 'axios';
-  export let product;
+  export let item;
 
   const dispatch = createEventDispatcher();
 
@@ -23,20 +23,21 @@
     }).then((result) => {
       if (result.isConfirmed) {
         // Enviar la solicitud de eliminación al backend
-        axios.delete(`http://localhost:3000/productosDelete/${product.id}`)
+        axios.delete(`http://localhost:3000/pedidosDelete/${item.id}`)
           .then(response => {
-
-            dispatch('customEvent');
-
-            Swal.fire(
+            if(response){
+              Swal.fire(
               '¡Eliminado!',
-              'El producto ha sido eliminado exitosamente.',
+              'Se eliminó la comprar correctamente',
               'success'
             );
+            dispatch('customEvent');
+            }
+           
           })
           .catch(error => {
             // Manejar cualquier error que ocurra durante la eliminación
-            console.error('Error al eliminar el producto:', error);
+            console.error('Error al eliminar el Pedido:', error);
             Swal.fire(
               'Error',
               'Se produjo un error al intentar eliminar el producto.',

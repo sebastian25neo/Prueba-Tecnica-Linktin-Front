@@ -1,51 +1,44 @@
 <script>
-  // core components
+  import { onMount } from 'svelte';
+  import axios from 'axios';
 
-  export let statSubtitle = "Traffic";
-  export let statTitle = "350,897";
-  // The value must match one of these strings
-  // "up" or "down"
-  export let statArrow = "up";
-  export let statPercent = "3.48";
-  // can be any of the text color utilities
-  // from tailwindcss
-  export let statPercentColor = "text-emerald-500";
-  export let statDescripiron = "Since last month";
-  export let statIconName = "far fa-chart-bar";
-  // can be any of the background color utilities
-  // from tailwindcss
-  export let statIconColor = "bg-red-500";
+  let products = [];
+
+  async function fetchData() {
+    try {
+      const response = await axios.get('http://localhost:3000/productos');
+      products = response.data;
+      console.log(products);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+
+  onMount(fetchData);
 </script>
 
-<div
-  class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg"
->
-  <div class="flex-auto p-4">
-    <div class="flex flex-wrap">
-      <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
-        <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-          {statSubtitle}
-        </h5>
-        <span class="font-semibold text-xl text-blueGray-700">
-          {statTitle}
-        </span>
-      </div>
-      <div class="relative w-auto pl-4 flex-initial">
-        <div
-          class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full {statIconColor}"
-        >
-          <i class="{statIconName}"></i>
+<div class="flex flex-wrap flex-row"> <!-- Cambiado flex-column a flex-row -->
+  {#each products as product}
+    <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
+      <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
+        <div class="flex-auto p-4">
+          <div class="flex flex-wrap">
+            <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
+              <h5 class="text-blueGray-400 uppercase font-bold text-xs">{product.nombre}</h5>
+              <span class="font-semibold text-xl text-blueGray-700">{product.precio}</span>
+            </div>
+            <p class="text-sm text-blueGray-400 mt-2">
+              <span class="whitespace-nowrap">{product.description}</span>
+            </p>
+          </div>
+          
+          <div class="relative w-auto pl-4 mt-2 flex-center">
+            <button class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-red-500">
+              <i class="far fa-chart-bar" style="margin-top: 2px;" > </i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-    <p class="text-sm text-blueGray-400 mt-4">
-      <span class="mr-2 {statPercentColor}">
-        <i
-          class="{statArrow === 'up' ? 'fas fa-arrow-up' : 'fas fa-arrow-down'}"
-        ></i>
-        {statPercent}%
-      </span>
-      <span class="whitespace-nowrap">{statDescripiron}</span>
-    </p>
-  </div>
+  {/each}
 </div>

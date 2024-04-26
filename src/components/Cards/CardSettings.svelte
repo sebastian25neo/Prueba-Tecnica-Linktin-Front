@@ -30,8 +30,8 @@
 
     let postData = {
       nombre: nameProduct,
-      precio: priceProduct
-    
+      precio: priceProduct,
+      description:descriptionProduct
   };
 
     try {
@@ -42,7 +42,7 @@
         text: responseMessage,
     });
 
-    eventBus.emit('eventoDesdeComponenteA');
+    eventBus.emit('cretaleTable');
     cleanFields()
 
 
