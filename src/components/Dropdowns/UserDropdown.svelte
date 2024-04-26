@@ -1,6 +1,7 @@
 <script>
   // library for creating dropdown menu appear on click
   import { createPopper } from "@popperjs/core";
+  import { navigate } from 'svelte-routing';
 
   // core components
 
@@ -21,6 +22,11 @@
         placement: "bottom-start",
       });
     }
+  };
+  const logout = () => {
+    // Aquí rediriges al usuario a la página de inicio de sesión
+    navigate('/');
+    localStorage.clear();
   };
 </script>
 
@@ -47,30 +53,13 @@
     bind:this="{popoverDropdownRef}"
     class="bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48 {dropdownPopoverShow ? 'block':'hidden'}"
   >
+
+ 
     <a
-      href="#pablo" on:click={(e) => e.preventDefault()}
+      on:click={logout}
       class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
     >
-      Action
-    </a>
-    <a
-      href="#pablo" on:click={(e) => e.preventDefault()}
-      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-    >
-      Another action
-    </a>
-    <a
-      href="#pablo" on:click={(e) => e.preventDefault()}
-      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-    >
-      Something else here
-    </a>
-    <div class="h-0 my-2 border border-solid border-blueGray-100" />
-    <a
-      href="#pablo" on:click={(e) => e.preventDefault()}
-      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-    >
-      Seprated link
+      Cerrar Session
     </a>
   </div>
 </div>
