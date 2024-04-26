@@ -1,7 +1,7 @@
 <script>
   // core components
 
-  import axios from '../scripts/axiosConfig';
+  import axios from '../scripts/axiosConfig.js';
   import Swal from 'sweetalert2';
   import eventBus from '../scripts/eventBus.js';
   

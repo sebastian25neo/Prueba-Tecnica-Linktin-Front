@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import TableEditProduct from "components/Dropdowns/TableEditProduct.svelte"; 
   import TableDeleteProduct from "components/Dropdowns/TableDeleteProduct.svelte";
-  import axios from '../scripts/axiosConfig';
+  import axios from '../scripts/axiosConfig.js';
   import eventBus from '../scripts/eventBus.js';
   export let color = "light";
 

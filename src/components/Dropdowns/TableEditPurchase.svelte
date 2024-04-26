@@ -3,7 +3,7 @@
   import { createPopper } from "@popperjs/core";
   import { createEventDispatcher } from 'svelte';
   import Swal from 'sweetalert2';
-  import axios from '../scripts/axiosConfig';
+  import axios from '../scripts/axiosConfig.js';
   export let item;
 
   const dispatch = createEventDispatcher();

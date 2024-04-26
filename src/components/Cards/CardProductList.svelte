@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import TableEditPurchase from "components/Dropdowns/TableEditPurchase.svelte";
   import TableDeletePurchase from "components/Dropdowns/TableDeletePurchase.svelte"; 
-  import axios from '../scripts/axiosConfig';
+  import axios from '../scripts/axiosConfig.js';
 
   let color = "light";
   let listPurchasedProducts = [];
