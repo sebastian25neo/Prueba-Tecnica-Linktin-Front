@@ -2,7 +2,6 @@
 import { navigate } from "svelte-routing";
 import axios from 'axios';
 import Swal from 'sweetalert2';
-export let location;
 
 const registerBg2 = "../assets/img/register_bg_2.png";
 
