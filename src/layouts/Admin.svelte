@@ -9,7 +9,6 @@
   import CreateProducts from "views/admin/CreateProducts.svelte";
   import ListPurchasedProducts from "views/admin/ListPurchasedProducts.svelte";
   export let location;
-  export let admin = "";
 </script>
 
 <div>

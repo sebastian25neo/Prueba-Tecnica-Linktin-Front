@@ -26,7 +26,6 @@
   const logout = () => {
     // Aquí rediriges al usuario a la página de inicio de sesión
     navigate('/');
-    localStorage.clear();
   };
 </script>
 
@@ -56,7 +55,7 @@
 
  
     <a
-      on:click={logout}
+      href="/" on:click={logout}
       class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
     >
       Cerrar Session

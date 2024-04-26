@@ -10,8 +10,6 @@
   function toggleCollapseShow(classes) {
     collapseShow = classes;
   }
-
-  export let location;
 </script>
 
 <nav

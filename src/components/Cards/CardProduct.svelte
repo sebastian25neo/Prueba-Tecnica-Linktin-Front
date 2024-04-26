@@ -77,7 +77,6 @@ async function buyProduct(item) {
     try {
       const response = await axios.post('/pedidos', postData);
       responseMessage = response.data.message;
-      console.log(responseMessage);
     Swal.fire({
         icon: 'success',
         text: responseMessage,

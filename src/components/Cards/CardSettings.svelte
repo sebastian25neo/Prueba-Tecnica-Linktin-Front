@@ -1,6 +1,6 @@
 <script>
   // core components
-  export let location;
+
   import axios from '../scripts/axiosConfig';
   import Swal from 'sweetalert2';
   import eventBus from '../scripts/eventBus.js';
