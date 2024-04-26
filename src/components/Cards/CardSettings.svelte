@@ -1,9 +1,9 @@
 <script>
   // core components
 
-  import axios from '../scripts/axiosConfig.js';
+  import axios from 'components/Scripts/axiosConfig.js';
   import Swal from 'sweetalert2';
-  import eventBus from '../scripts/eventBus.js';
+  import eventBus from 'components/Scripts/eventBus.js';
   
 
   let nameProduct = '';

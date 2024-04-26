@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import Swal from 'sweetalert2';
   import TableAddShoppingCart from "components/Dropdowns/TableAddShoppingCart.svelte"; 
-  import axios from '../scripts/axiosConfig.js';
+  import axios from 'components/Scripts/axiosConfig.js';
 
   let color = "light";
   let responseData = [];
