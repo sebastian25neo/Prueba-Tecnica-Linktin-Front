@@ -1,7 +1,7 @@
-import Index from "./Index.svelte";
+import App from "./Index.svelte";
 
-const index = new Index({
-  target: document.getElementById("Index"),
+const app = new App({
+  target: document.getElementById("app"),
 });
 
-export default index;
+export default app;
