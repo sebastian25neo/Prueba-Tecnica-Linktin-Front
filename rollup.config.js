@@ -23,25 +23,7 @@ const aliases = alias({
   ],
 });
 
-const indexTemplate = `<!--
-
-=========================================================
-* Notus Svelte - v1.1.0 based on Tailwind Starter Kit by Creative Tim
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/notus-svelte
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/notus-svelte/blob/main/LICENSE.md)
-
-* Tailwind Starter Kit Page: https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
--->
+const indexTemplate = `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -81,33 +63,39 @@ const indexTemplate = `<!--
 
 if (production) {
   fs.writeFileSync(
-    "./public/index.html"
+    "./public/index.html",
+    indexTemplate
       .replace("<<process-env-status>>", "PRODUCTION: true")
       .replace(/<<live-preview-link>>/g, "/notus-svelte")
   );
   fs.writeFileSync(
-    "./public/200.html"
+    "./public/200.html",
+    indexTemplate
       .replace("<<process-env-status>>", "PRODUCTION: true")
       .replace(/<<live-preview-link>>/g, "/notus-svelte")
   );
   fs.writeFileSync(
-    "./public/404.html"
+    "./public/404.html",
+    indexTemplate
       .replace("<<process-env-status>>", "PRODUCTION: true")
       .replace(/<<live-preview-link>>/g, "/notus-svelte")
   );
 } else {
   fs.writeFileSync(
-    "./public/index.html"
+    "./public/index.html",
+    indexTemplate
       .replace("<<process-env-status>>", "")
       .replace(/<<live-preview-link>>/g, "")
   );
   fs.writeFileSync(
-    "./public/200.html"
+    "./public/200.html",
+    indexTemplate
       .replace("<<process-env-status>>", "")
       .replace(/<<live-preview-link>>/g, "")
   );
   fs.writeFileSync(
-    "./public/404.html"
+    "./public/404.html",
+    indexTemplate
       .replace("<<process-env-status>>", "")
       .replace(/<<live-preview-link>>/g, "")
   );
