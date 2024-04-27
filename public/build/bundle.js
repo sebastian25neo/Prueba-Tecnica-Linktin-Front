@@ -14665,11 +14665,11 @@ var app = (function () {
     	}
     }
 
-    const app = new Index({
-      target: document.getElementById("app"),
+    const index = new Index({
+      target: document.getElementById("Index"),
     });
 
-    return app;
+    return index;
 
 }());
 //# sourceMappingURL=bundle.js.map
