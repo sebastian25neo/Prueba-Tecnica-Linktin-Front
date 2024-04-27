@@ -2,6 +2,7 @@
   // core components
   import CardTable from "components/Cards/CardTable.svelte";
   import CardSettings from "components/Cards/CardSettings.svelte";
+  export let location;
 </script>
 
 <div>
